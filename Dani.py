@@ -84,9 +84,9 @@ CorrectPassword = "Omi"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("🔐 \x1b[1;94mTool Username >>> \x1b[1;97m")
+    username = raw_input("\x1b[1;94mTool Username:\x1b[1;97m")
     if (username == CorrectUsername):
-    	password = raw_input("🔐 \x1b[1;91mTool Password >>> \x1b[1;97m")
+    	password = raw_input("\x1b[1;91mTool Password:\x1b[1;97m")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
             loop = 'false'
