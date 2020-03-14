@@ -56,7 +56,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\x1b[1;93mPlease Wait \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\x1b[1;94mPlease Wait \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -77,7 +77,7 @@ print  """
   \033[1;94m+#+    +#+ +#+     +#+ +#+  +#+#+#     +#+    
   \033[1;94m#+#    #+# #+#     #+# #+#   #+#+#     #+#    
   \033[1;94m#########  ###     ### ###    #### ###########
-\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"""
+\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------\033[1;97m"""
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
@@ -86,7 +86,7 @@ loop = 'true'
 while (loop == 'true'):
     username = raw_input("\x1b[1;94mTool Username:\x1b[1;97m")
     if (username == CorrectUsername):
-    	password = raw_input("\x1b[1;91mTool Password:\x1b[1;97m")
+    	password = raw_input("\x1b[1;94mTool Password:\x1b[1;97m")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
             loop = 'false'
