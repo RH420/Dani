@@ -69,6 +69,34 @@ vulnot = "\033[31mNot Vuln"
 vuln = "\033[32mVuln"
 
 os.system("clear")
+print  """
+  \033[1;97m:::::::::      :::     ::::    ::: :::::::::::
+  \033[1;97m:+:    :+:   :+: :+:   :+:+:   :+:     :+:    
+  \033[1;94m+:+    +:+  +:+   +:+  :+:+:+  +:+     +:+    
+  \033[1;94m+#+    +:+ +#++:++#++: +#+ +:+ +#+     +#+    
+  \033[1;94m+#+    +#+ +#+     +#+ +#+  +#+#+#     +#+    
+  \033[1;94m#+#    #+# #+#     #+# #+#   #+#+#     #+#    
+  \033[1;94m#########  ###     ### ###    #### ###########
+\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"""
+
+CorrectUsername = "Omi6t"
+CorrectPassword = "Omi"
+
+loop = 'true'
+while (loop == 'true'):
+    username = raw_input("🔐 \x1b[1;94mTool Username »» \x1b[1;97m")
+    if (username == CorrectUsername):
+    	password = raw_input("🔐 \x1b[1;91mTool Password »» \x1b[1;97m")
+        if (password == CorrectPassword):
+            print "Logged in successfully as " + username
+            loop = 'false'
+        else:
+            print "\033[1;91mWrong Password"
+            os.system('xdg-open https://www.Facebook.com/Omi6t')
+    else:
+        print "\033[1;91mWrong Username"
+        os.system('xdg-open https://www.Facebook.com/Omi6t')
+
 def login():
 	os.system('clear')
 	try:
