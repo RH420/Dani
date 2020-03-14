@@ -79,8 +79,8 @@ def login():
 		print logo
 		print('               \033[1;97m\033[1;44mLOGIN WITH FACEBOOK\033[0m' )
 		print('	' )
-		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
-		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
+		id = raw_input('   \033[1;94mID/Email: \033[1;97m')
+		pwd = raw_input('   \033[1;94mPassword: \033[1;97m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
